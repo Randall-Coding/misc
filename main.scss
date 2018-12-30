@@ -1,0 +1,497 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$left_width: 55% ;  //650px;
+$slideshow_width: 92%;
+$slide_height: 300px;
+$profile_width: 60%; //$profile_dim: 130px;
+$color_ruby: #E6BF83;
+$manilla: #f4e3c8;
+$baby_blue: rgb(217, 237, 247);
+$body: rgba(255,255,204,0.2);
+
+@mixin roundborder($rounding1){
+  -moz-border-radius: $rounding1 ;
+  -webkit-border-radius: $rounding1 ;
+  -o-border-radius: $rounding1 ;
+  -khtml-border-radius: $rounding1 ;
+  border-radius: $rounding1 ;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body *{
+  //maybe later
+  // padding-top: 0;
+  // padding-bottom: 0;
+  // margin-top: 0;
+  // margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  margin-right:0px;
+}
+a.ethereum{
+    color:black;
+    text-shadow: -2px 0 $baby_blue, 0 2px $baby_blue, 2px 0 $baby_blue, 0 -2px $baby_blue;
+}
+
+a.scraper{
+  color:red;
+  font-style:italic;
+}
+
+a.no-dec:visited{
+  text-decoration:none;
+  color:black;
+}
+
+.matlab{
+  color:red;
+}
+
+body{
+  background-position: center;
+  background-size:cover;
+  background-color: rgba(255,255,204,0.2); //$body;
+  text-shadow: 0px 0px 0px red;
+  font-size: 17.5px;
+  font-family:Camphor,Open Sans,Segoe UI,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+hr{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+div.contact_window{
+    background-color: white;
+    border-radius: 20px;  //debug rounding error
+    @include roundborder(20px);
+    border: 3px solid black;
+    position:absolute;
+    width: 60%;
+    min-width:700px;
+    max-width:800px;
+    height: 520px;
+    overflow:scroll;
+    left:20%;
+    top: 130px;
+    z-index:10;
+    display: none;
+    display: block; //DEBUG
+}
+
+div.contact_me{
+  margin-left:60px;
+  height: 90%;
+  padding: 0px;
+  margin-top: 0px;
+  @include roundborder(20px);
+}
+
+div.description{
+  & a.visit {
+   float: right;
+   margin: 0px;
+   margin-right: 30px;
+   margin-top: 20px;
+  }
+}
+
+div.h1{
+   text-align: center;
+}
+
+div.header{
+  background-color: $manilla;  //rgba(252,90,141,0.4); // #fc5a8d;
+  opacity:0;
+}
+
+div.description{
+  display:none;
+}
+
+
+div.page{
+  //works better as expansive div anyway. could not modify width here
+}
+
+div.left {
+  width: $left_width;
+  min-width:500px;
+  max-width:650px;
+  float:left;
+  padding-left: 55px;
+  margin-left: auto;
+  font-size: 0.9em;
+}
+
+div.main{
+  width: 100%; //width: 1300px;
+  min-width:400px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  overflow:hidden;
+}
+
+div.mask{
+  background-color: black;
+  opacity: 0.6;
+  position:fixed;
+  height:100%;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  display:none;
+  display:block; //DEBUG
+}
+
+div.profile{
+  width: 145px;  //$profile_width
+  height: 145px;
+  //border: 1px solid orange;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  position:relative;
+  top: 0;
+  left: 0;
+  overflow:visible;
+}
+
+div.mid{
+    float:left;
+    width:12%;
+    height:1000px;
+}
+
+div.right {
+  float:left;
+  width: 20%; //270px;
+  min-width: 180px;
+  max-width:300px;
+  overflow:hidden;
+  padding-right:20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  margin-top:45px;
+  margin-left:0px; //55px;
+  margin-bottom:20px;
+  background-color:white;
+  border-radius:50px;
+  border: 1px solid black;
+  margin-right:auto;
+  font-size: 0.9em;
+}
+
+div.slideshow{
+  width: $slideshow_width;
+  height: $slide_height;
+  //overflow:visible;
+  overflow:hidden;
+  border: 6px solid;
+  border-radius: 5px;
+  background-color:rgba(230,191,131,0.1);
+  margin-left:auto;
+  margin-right: auto;
+  position:relative;
+}
+
+form.contact_form{
+  & textarea{
+    width: $slideshow_width;
+    height: 350px;
+    margin-right: auto;
+    background-color: $body;
+    font-size: 1.4em;
+    opacity: 0.9;
+    border: 1px grey solid;
+    //border: 3px brown solid;
+  }
+  & * {
+    font-size: 1.0em;
+    color: black;
+  }
+  & input[type="text"]{
+    width:180px;
+    opacity: 0.9;
+    background-color: $body;
+    border: 1px grey solid;
+  }
+}
+
+h1, h2{
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  display: inline-block;
+  font-family: Times;
+}
+
+h1, h3 {
+  display:inline;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h3 {
+  font-size:1.6em;
+  //text-shadow: 1px 1px 2px red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  //text-decoration: underline;
+  margin-right:0px;
+  background-color:$manilla;
+  border-radius:10px;
+  display:inline-block;
+  margin-top:0px;
+  margin-bottom:0px;
+  width:100%;
+
+  transition: all 2s ease;
+}
+
+h3 a {
+  color: orange;
+}
+
+img.profile {
+  width:100%;
+  height: 100%; //sic. $profile_dim;
+  border:2px solid;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
+  top:0px;
+  left:0px;
+  border-radius:10px;
+}
+
+main{
+    display:inline;
+}
+
+table.contact_me{
+  padding: 0px;
+  width: $slideshow_width;
+  margin-top: 10px;
+  margin-left:3.5px;
+  border-collapse: collapse;
+  & *{
+    padding: 0px;
+    margin:0px;
+  }
+  & td{
+    text-align: center;
+
+  }
+}
+
+table.contact_menu{
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align:center;
+
+  background-color: $body;
+  width:100%;
+  max-width:400px;
+  height:auto;
+  font-size:1.2em;
+  font-weight:bold;
+  //note don't display as block
+  overflow:hidden;
+  border:2px solid black;
+  border-collapse:collapse;
+
+  & a {
+      width:100%;
+    //  padding-left: 60px;
+    // padding-right: 60px;
+  }
+
+  & a:link{
+    color:black;
+
+  }
+
+  & a:visited{
+    color:black;
+  }
+
+  & tr{
+    margin:0;
+    border-bottom:2px solid black;
+  }
+
+  & tr:hover{
+    background-color: silver;
+  }
+
+  & td {
+  }
+
+}
+
+ul {
+  list-style:none
+}
+
+
+.center{
+  margin-right: auto;
+  margin-left: auto;
+  display:block;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.portfolio{
+  width: 100%;
+  height:$slide_height;
+  margin-left: auto;
+  margin-right: auto;
+  //border: 6px solid;
+  display: none;
+  position:absolute;
+  top:0px;
+  left:0px;
+  //top:-100%;
+  //left: 100%;
+  float:right;
+}
+
+.portfolio_active{
+  width: 100%;
+  height: $slide_height;
+  margin-left: auto;
+  margin-right: auto;
+  //border: 6px solid;
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:block;
+  float:left;
+}
+
+.shifted{
+  top:0px;
+  left: 100%;
+  display:block;
+  float:right;
+}
+
+
+
+
+#btn-profile{
+    margin-top:5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight:bold;
+    font-size:0.9em;
+    border-radius: 10px;
+}
+
+#logo {
+   //align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  margin-bottom: 0px;
+  align-self: center;
+}
+
+#moustache{
+  height:60px;
+  width:35%;
+  position:absolute;
+  visibility:hidden;
+  left:34%;
+  top:43%;
+  z-index:3;
+}
+
+#slideshow4{
+  width:80%;
+}
+
+
+.active{
+  display:block;
+}
+
+.inactive{
+  display:none;
+}
+
+/* Responsive Design. *//* Responsive Design. *//* Responsive Design. *//* Responsive Design. *//* Responsive Design. */
+/* Responsive Design. *//* Responsive Design. *//* Responsive Design. *//* Responsive Design. *//* Responsive Design. */
+/* Responsive Design. *//* Responsive Design. *//* Responsive Design. *//* Responsive Design. *//* Responsive Design. */
+
+//smaller browser window or large tablet
+@media screen and (max-width:1050px){
+    div.main{
+      font-size: 0.93em
+    }
+    div.left{
+      padding-left:5px;
+    }
+    div.mid{
+      width:7%;
+    }
+    div.description{
+      display:none;
+    }
+}
+
+//tablet portrait and smaller
+@media screen and (max-width:910px) {
+  div.left{
+    float:none;
+    margin-left:auto;
+    margin-right: auto;
+    min-width:450px;
+    padding:0px;
+    width: 80%;
+  }
+  div.right{
+    float:none;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:0px;
+    width:60%;
+    min-width:250px;
+    max-width:inherit;
+  }
+  div.profile-container{
+    float:left;
+    margin-right:5px;
+    margin-bottom: 10px;
+  }
+  section.bio{
+    padding-top:15px;
+  }
+  div.mid{
+    display:none;
+  }
+  div.description{
+    display:block;
+  }
+
+}
+//portrait mode of iphone and smaller
+@media screen and (max-width:760px){
+
+}

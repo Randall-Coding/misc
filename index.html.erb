@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+
+
+<html lang="en">
+  <head>
+    <%= stylesheet_link_tag 'main' %>
+    <%= favicon_link_tag 'cartoon.ico' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title> Randall Coding | Web Development & SEO </title>
+    <meta name="description" content="This is Randall's professional profile.
+        Ruby on Rails specialist, Javascript junky and SEO optimizer.  USA based
+        web designer delivering quality content on demand.  Phoenix Arizona resident">
+    <% if Rails.env == "production" %>
+      <!-- Matomo -->
+      <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+          var u="https://randallcoding.matomo.cloud/";
+          _paq.push(['setTrackerUrl', u+'piwik.php']);
+          _paq.push(['setSiteId', '1']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/randallcoding.matomo.cloud/piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+      </script>
+      <!-- End Matomo Code -->
+    <% end %>
+  </head>
+
+  <body>
+    <!-- <h1> Randall Coding: brief portfolio  </h1>  <%= link_to '(github)' , 'https://github.com/randall-coding' %> -->
+    <div class='page'>
+      <%= render 'header' %>
+
+        <div class="left">
+        <main>
+          <h1 class="center"> Ruby on Rails Projects </h1>
+          <ul>
+            <li>
+                <h3> <%= link_to 'Ethereum Blockchain API', 'api/ethereum', class: "ethereum", target:"_blank" , id:"last"%> </h3>
+                <div class="description">
+                  <p> Integration of Etherscan API to scan the Ethereum blockchain.  Works for Mainnet and Ropsten (testnet), and caches data for
+                      faster future retrieval.
+                  </p>
+                  <p> Click <a href="https://etherscan.io/txs" target="_blank"> here </a> for a list of transaction numbers you can use in the search </p>
+                  <p>  NOTE: if the transaction is only a few seconds old it may not yet be obtainable.
+                      <b> <a href="api/ethereum" target="_blank"  class="visit"> (Visit) </a> </b>
+                  </p>
+
+                </div>
+                <div class="slideshow" id="slideshow5">
+                  <%= link_to image_tag('ethereum1.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'api/ethereum', target:"_blank" %>
+                </div>
+            </li>
+            <hr/>
+
+            <li>
+                <h3> <%= link_to 'Elite Bank Website', 'https://elitebank.randallcoding.com', class: "elite", target:"_blank"%> </h3>
+                    <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
+
+                <div class="description">
+                  <p> Elite bank features Postgres database, admin account / page authorization, user sign in, Stripe payment membership subscriptions and is deployed on Heroku.
+                  <i> Get started by logging in as "admin" with password "p".</i> <p>
+                      Log in as an individual customer using their first name as username and "p" as their password. </p>
+                  <p> Once logged in, view customer profiles, edit customers or delete them.
+                      <b> <a href="https://elitebank.randallcoding.com" target="_blank" class="visit"> (Visit) </a> </b>
+                  </p>
+                </div>
+                <div class="slideshow" id="slideshow1">
+                  <%= link_to image_tag('elitebank1.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+                  <%= link_to image_tag('elitebank2.png' , class: 'portfolio shifted', alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+                  <%= link_to image_tag('elitebank3.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+                  <%= link_to image_tag('elitebank4.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+                  <%= link_to image_tag('elitebank5.png' , class: 'portfolio' , alt:'portfolio image of website'), 'https://elitebank.randallcoding.com/', target:"_blank" %>
+                </div>
+            </li>
+            <hr/>
+
+            <li>
+              <h3> <%= link_to 'Web Scraper', 'https://scraper-randallcoding.herokuapp.com' , class: "scraper", target:"_blank"%> </h3>
+                  <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
+              <div class="description">
+                <p> Web scraper obtains product names and prices from Amazon based on a search.  Use the search query box to search for listings of any items.  Number of pages
+                  of results can be specified to obtain more results.  <b> <a href="https://scraper-randallcoding.herokuapp.com" target="_blank" class="visit"> (Visit) </a> </b>
+                  <i></i>
+                <p>
+              </div>
+
+              <div id="slideshow2" class="slideshow">
+                <%= link_to image_tag('scraper.png' , class: 'portfolio_active', alt:'portfolio image of website'), 'https://scraper-randallcoding.herokuapp.com', target:"_blank"%>
+              </div>
+              </p>
+              <p>
+            </li>
+            <hr/>
+          </ul>
+
+          <h1 class="center"> Wordpress Projects </h1>
+          <ul>
+            <li>
+              <h3> <%= link_to 'Event Planner\'s Website', 'javascript:void(0)' , class: "", target:"_blank"%> </h3>
+                  <!-- <%= link_to '(site)' , 'https://elitebank.randallcoding.com' %> -->
+              <div class="description">
+                <p> Wordpress site for event planning company in Austin Texas.  Client needed help to fix the broken website functionaliy, re-write the styles on each page,
+                    customize the wordpress theme, and add page scrolling animations.<b> <a href="https://www.upwork.com/fl/randallbabaoye3" target="_blank" class="visit"> (Review) </a> </b>
+                  <i></i>
+                <p>
+              </div>
+              <div id="slideshow3" class="slideshow">
+                <%= link_to image_tag('xo_site.jpg' , class: 'portfolio_active', alt:'portfolio image of website'), 'javascript:void(0)'%>
+              </div>
+              <hr/>
+            </li>
+          </ul>
+
+          <h1 class="center"> Data Analytics Projects </h1>
+          <ul>
+            <li>
+                <h3 class="matlab"> Ultrasound Data Visualization </h3> <!-- <%= link_to 'Ultrasound Data Visualization', 'javascript:void(0)', class: "matlab" %> </h3> -->
+                <div class="description">
+                  <p> Version 1.0: A stand alone Windows app using MATLAB to process ultrasound data and create color mapped image.
+                  <p>
+                  <p> Version 2.0: A stand alone Windows app using MATLAB GUI which performs file selection,
+                      sorting and creates an mp4 video from the sorted charts.  Sorts hundreds of files at one time.
+                  </p>
+                </div>
+                <div id="slideshow4" class="slideshow" >
+                  <%= link_to image_tag('matlab1.png' , class: 'portfolio_active'), 'javascript:void(0)', alt:'portfolio image of application' %>
+                  <%= link_to image_tag('matlab2.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
+                  <%= link_to image_tag('matlab3.png' , class: 'portfolio'), 'javascript:void(0)', alt:'portfolio image of application GUI' %>
+        <!--          <%= link_to image_tag('elitebank4.png' , class: 'portfolio'), 'https://elitebank.randallcoding.com/' %>
+                  <%= link_to image_tag('elitebank5.png' , class: 'portfolio'), 'https://elitebank.randallcoding.com/' %>
+        -->        </div>
+            </li>
+          </ul>
+
+         </main>
+        </div> <!-- div_left -->
+
+        <div class="mid">
+          <!-- spacer div -->
+        </div>
+
+        <div class='right'>
+          <!-- Debug css doesn't load in button
+              <%= button_to 'Toggle me' , class: "center", style: 'margin-left:200px;height:150px'%>
+          -->
+          <h2 class="center"> About me </h2>
+          <div class='profile-container'>
+            <div id='dummy' class='profile'>
+              <%= image_tag 'moustache.png' , id:'moustache' %>
+              <%= image_tag 'cartoon.png', alt: 'profile picture. avatar',class: 'profile', id:'img' %>
+            </div>
+            <button id='btn-profile' class='center' title='moustache'> Toggle Moustache  </button>
+          </div>
+          <section class="bio">
+            <p>
+                 &nbsp; &nbsp; Randall here.  I'm a Ruby on Rails enthusiast, with a strong programming background.  I love building websites and
+                 solving new challenges.  Native born US citizen, living in Phoenix, Arizona.
+            </p>
+          </section>
+          <address class="center">
+          <table class="contact_menu">
+            <tr> <td>  <a href='https://www.github.com/randall-coding' target="_blank">
+                          <div>  GitHub </div>
+                       </a>
+           </td> </tr>
+           <tr> <td>
+              <a href='javascript:void(0)' data-remote="true" class="contact">
+                 <div> Contact </div>
+              </a>
+           </td> </tr>
+           <tr> <td>
+             <a href="https://www.paypal.me/randallcoding" target="_blank">
+                <div> Paypal </div>
+             </a>
+           </td>  </tr>
+           <tr style='border-bottom:0px none;'> <td>
+             <a href="#last" class="last">
+               <div> Latest </div>
+             </a>
+
+           </td>  </tr>
+          </table>
+          </address>
+
+          <br>
+          <p> <b> <center> Overview of my skills: </center> </b>
+          <br> Ruby on Rails web applications.
+          <br><br> Postgres database implementation
+          <br><br> Heroku deployments
+          <br><br> JQuery, AJAX and Coffeescript
+          <br><br> MATLAB and C++ for computation of data sets
+          <br><br> Web scraping with Ruby
+          <br><br> API integrations
+          <br><br> User databases, secure logins and admin authorization
+          <br><br> Stripe payment processing
+          <br><br> Graduate work in computer science
+          </p>
+
+
+        </div> <!-- end div.right -->
+
+        <div class="contact_window" id='#contact_window'>
+            <%= render 'contact' %>
+        </div> <!-- end div.contact_form -->
+
+        <div class="mask">
+
+        </div>     <!-- end div.mask -->
+      </div>
+    </div>
+
+  </body>
+
+</html>
